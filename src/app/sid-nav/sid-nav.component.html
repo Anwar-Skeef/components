@@ -1,0 +1,17 @@
+<div class="btnSideNav" (click)="openList=!openList">
+    <i class="fa fa-bars"></i>
+</div>
+<div class="sideNav" [ngClass]="{'open': openList, 'close':!openList}">
+
+    <div class="sideNavItem">
+        <div (click)="openList=false" class="btnSideNavClose">
+            <i class="fa fa-close"></i>
+        </div>
+        <hr style="margin: 10px 20px ;">
+        <ul>
+            <li (click)="goTo('home-page')"> Home Page </li>
+            <li (click)="goTo('sellHome')"> Sell Home </li>
+            <li (click)="logOut()"> Log out </li>
+        </ul>
+    </div>
+</div>
